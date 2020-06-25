@@ -1,0 +1,81 @@
+<script>
+  export let text;
+</script>
+
+<div class="divider center fixed">
+  <hr/>
+  <div class="row">
+    <h2>{text}</h2>
+  </div>
+  <hr/>
+</div>
+
+<style>
+  h2 {
+    font-size: 2em;
+    white-space: nowrap;
+  }
+
+  svg {
+    margin-right: 12px;
+    height: 3.0em;
+    width: 3.0em;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+  }
+
+  .divider {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 80vw;
+    margin: 0px auto;
+  }
+
+  .divider > hr {
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background: var(--primary-color-light);
+  }
+
+  .divider.center >:first-child {
+      margin-right: 20px;
+  }
+
+  .divider.center >:last-child {
+      margin-left: 20px;
+  }
+
+  @media screen and (max-width: 600px) {
+    h2 {
+      font-size: 1.6em;
+    }
+
+    svg {
+      height: 2.5em;
+      width: 2.5em;
+    }
+
+    .divider.center >:first-child {
+      margin-right: 10px;
+    }
+
+    .divider.center >:last-child {
+      margin-left: 10px;
+    }
+  }
+</style>
