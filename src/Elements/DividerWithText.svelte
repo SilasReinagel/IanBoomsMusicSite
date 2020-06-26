@@ -18,7 +18,6 @@
   }
 
   h2 {
-    font-size: 2em;
     white-space: nowrap;
   }
 

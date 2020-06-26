@@ -56,7 +56,7 @@
   p {
     color: var(--alternate-color-light);
     font-size: 1.1em;
-    line-height: 1.2em;
+    line-height: 1.6em;
   }
 
   .email-form {

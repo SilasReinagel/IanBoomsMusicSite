@@ -10,7 +10,8 @@ export default ({
   contactPrompt: 'I compose music in a variety of styles!<br><br>Message me with your project details, and I will get back to you with a music commission quote.',
   social: {
     twitter: 'https://twitter.com/ianboomsmusic',
-    soundcloud: 'https://soundcloud.com/ianbooms'
+    soundcloud: 'https://soundcloud.com/ianbooms',
+    twitch: 'https://www.twitch.tv/ibums'
   }
 });
 

@@ -19,12 +19,18 @@
       </div>
       <div class="column vertical">
         <h2>Social & Web</h2>
-        <div>
+        <div class="social-links">
+          {#if company.social.soundcloud}
+          <a href={company.social.soundcloud}><img class="soundcloud" src="/social/soundcloud-multi-color.svg" alt="Soundcloud Icon"/></a>
+          {/if}
           {#if company.social.facebook}
-          <a href={company.social.facebook}><img class="facebook" src="/icons/facebook-square.svg" alt="Facebook Icon"/></a>
+          <a href={company.social.facebook}><img class="facebook" src="/social/facebook-multi-color.svg" alt="Facebook Icon"/></a>
           {/if}
           {#if company.social.twitter}
-          <a href={company.social.twitter}><img class="twitter" src="/icons/twitter-square.svg" alt="Twitter Icon"/></a>
+          <a href={company.social.twitter}><img class="twitter" src="/social/twitter-multi-color.svg" alt="Twitter Icon"/></a>
+          {/if}
+          {#if company.social.twitch}
+          <a href={company.social.twitch}><img class="twitch" src="/social/twitch-multi-color.png" alt="Twitch Icon"/></a>
           {/if}
         </div>
         <hr/>
@@ -43,19 +49,24 @@
 
 <style>
   a {
-    font-size: 1em;
+    font-size: 1em;    
   }
 
   .facebook {
     max-width: 48px;
-    margin: 12px 0;
   }
 
-  .twitter {
+  .social-links a {
+    margin-right: 12px;
+  }
+  .social-links:last-child {
+    margin-right: 0;
+  }
+
+  a img {
     max-width: 48px;
-    margin: 12px 24px;
   }
-
+  
   .navlink {
     font-size: 1em;
     transition-duration: 0.4s;
