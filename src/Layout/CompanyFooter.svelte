@@ -9,7 +9,7 @@
   <Container>
     <div class="mobile-three-column-layout">
       <div class="column">
-        <h2>Contact Us</h2>
+        <h2>Contact</h2>
         <h4>{company.name}</h4>
         <a href="mailto:{company.email}">{company.email}</a>
         <hr/>
@@ -20,8 +20,12 @@
       <div class="column vertical">
         <h2>Social & Web</h2>
         <div>
+          {#if company.social.facebook}
           <a href={company.social.facebook}><img class="facebook" src="/icons/facebook-square.svg" alt="Facebook Icon"/></a>
+          {/if}
+          {#if company.social.twitter}
           <a href={company.social.twitter}><img class="twitter" src="/icons/twitter-square.svg" alt="Twitter Icon"/></a>
+          {/if}
         </div>
         <hr/>
       </div>
@@ -81,6 +85,7 @@
 
   section {
     background-color: var(--alternate-background-color);
+    border-top: 2px var(--secondary-color) solid;
   }
 
   .mobile-three-column-layout {

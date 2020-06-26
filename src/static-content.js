@@ -2,7 +2,7 @@ const address = (line1, city, state, zip5, mapLink) => ({ line1, city, state, zi
 
 export default ({
   name: 'ian booms music',
-  slogan: 'Freelance Music Composer',
+  slogan: 'Freelance composer and host of the monthly #GameAudio Listening Party!',
   email: 'theoriginalibums@gmail.com',
   defaultBanner: './images/banner.jpg',
   logo: './images/avatar.jpg',

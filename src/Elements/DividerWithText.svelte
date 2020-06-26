@@ -2,15 +2,21 @@
   export let text;
 </script>
 
-<div class="divider center fixed">
-  <hr/>
-  <div class="row">
-    <h2>{text}</h2>
+<div class="bg-gradient">
+  <div class="divider center fixed no-bg-color">
+    <hr/>
+    <div class="row no-bg-color">
+      <h2>{text}</h2>
+    </div>
+    <hr/>
   </div>
-  <hr/>
 </div>
 
 <style>
+  .bg-gradient {
+    width: 100%;
+  }
+
   h2 {
     font-size: 2em;
     white-space: nowrap;

@@ -5,10 +5,10 @@
   import company from '../static-content';
 </script>
 
-<StandardPageLayout title="Contact Us" headerImg="/images/banner.jpg" headerImgAlt="Cyberpunk Alley">
+<StandardPageLayout title="Contact" headerImg="/images/banner.jpg" headerImgAlt="Cyberpunk Alley">
   <TwoColumnLayout>
     <form class="email-form" name="contact" form-name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" slot='second'>
-      <h2>Contact Us</h2>
+      <h2>Contact</h2>
       <hr/>
       <div hidden aria-hidden="true">
         <label>

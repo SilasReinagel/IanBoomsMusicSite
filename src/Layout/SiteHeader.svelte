@@ -8,8 +8,8 @@
   import { pages } from '../pages.js';
 </script>
 
-<header>
-  <a href="." class="home"><img src="/images/avatar.jpg" alt="Avatar"/><h1>{company.name}</h1></a>
+<header class="bg-gradient">
+  <a href="." class="home"><img src="/images/avatar.jpg" alt="Avatar" style="height: 64px; width: 64px; border-radius: 16px"/><h1>{company.name}</h1></a>
   <SiteSidebar bind:open={sidebarOpen}/>
   <nav class="navbar tablet-hidden">
     {#each pages as page}
@@ -26,7 +26,6 @@
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    background-color: var(--primary-background-color);
     box-sizing: content-box;
     border-bottom: 2px var(--secondary-color) solid;
     height: 90px;
@@ -46,16 +45,25 @@
     max-width: 64px;
     border-radius: 16px;
   }
-
+ 
   .navlink {
     color: var(--primary-color);
+    padding: 6px;
     margin: 5px 15px;
     font-size: 1.1em;
     line-height: 22px;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    transition-duration: 0.2s;
+    transition: all 350ms;
+    text-align: center;
+  }
+
+  .navlink:hover,
+  .navlink:active {
+    border-top: 2px solid var(--primary-color); 
+    border-bottom: 2px solid var(--primary-color); 
+    color: var(--primary-color-hover);
   }
 
 </style>

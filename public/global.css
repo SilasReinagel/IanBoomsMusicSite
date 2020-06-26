@@ -5,6 +5,7 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
 :root {
   --primary-color: #00dce8;
   --primary-color-light: #2a48b6;
+  --primary-color-hover: #11edf9;
   --primary-background-color: #141414;
   --secondary-color: #d500fb;
   --secondary-color-hover: #dd2cfc;
@@ -45,7 +46,16 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.05em;
 }
 
+.bg-gradient {  
+  background-color: var(--primary-background-color);
+  background-image: linear-gradient(var(--primary-background-color), #060606, var(--primary-background-color));
+}
+
 /* End Site Theme */
+
+.no-bg-color {
+  background-color: transparent;
+}
 
 div,
 section {

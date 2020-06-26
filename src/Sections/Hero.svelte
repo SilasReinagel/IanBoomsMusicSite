@@ -31,6 +31,7 @@
     color: var(--primary-color);
     padding: 2em;
     background-color: rgba(0, 0, 0, 0.5);
+    background-image: none;
     border-radius: 2em;
   }
 

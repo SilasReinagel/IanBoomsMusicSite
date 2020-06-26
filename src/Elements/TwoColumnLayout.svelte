@@ -19,12 +19,13 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin: 1.5em 0 8em 0;
+    margin: 1.5em 0 0 0;
+    padding-bottom: 6em;
   }
 
   .column {
     max-width: 80vw;
-    width: 640px;
+    width: 600px;
     display: flex;
     flex-direction: column;
     margin: 0px 2em;
