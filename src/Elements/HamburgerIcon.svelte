@@ -39,7 +39,7 @@
 	}
 
 	.open svg {
-		transform: scale(0.7)
+		transform: scale(0.7);
 	}
 
 	.open #top {

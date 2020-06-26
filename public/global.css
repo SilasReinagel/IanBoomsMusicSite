@@ -115,7 +115,7 @@ img {
 
   .highres,
   .mobile-hidden {
-    display: none;
+    display: none !important;
   }
 
   .mobile {

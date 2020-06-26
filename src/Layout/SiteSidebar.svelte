@@ -1,7 +1,6 @@
 <script>
   export let open = false;
 
-  import CoffeeIcon from '../Elements/CoffeeIcon.svelte';
   import HamburgerIcon from '../Elements/HamburgerIcon.svelte';
 
   import company from '../static-content';
@@ -11,19 +10,18 @@
 <aside class="border-r-2 shadow-lg" class:open>
   <nav class="navbar">
     <div class="align-right">
-      <h1>{company.name}</h1>
+      <a href="." class="home"><img src="/images/avatar.jpg" alt="Avatar" style="height: 64px; width: 64px; border-radius: 16px"/><h1>{company.name}</h1></a>
       <HamburgerIcon bind:open/>
     </div>
     {#each pages as page}
-      <a class="navlink" href={page.href}><CoffeeIcon height='1em' width='1em' />{page.name}</a>
+      <a class="navlink" href={page.href}>{page.name}</a>
     {/each}
   </nav>
 </aside>
 
 <style>
   h1 {
-    margin: 0;
-    white-space: nowrap;
+    margin: 10px;
   }
 
   .align-right {
@@ -31,9 +29,12 @@
     flex-direction: row;
     justify-content: space-between;
     align-content: center;
-    padding: 1.6em;
+    align-items: center;
+    padding: 0 16px;
     width: 100%;
-    height: 80px;
+    height: 90px;
+    border-bottom: 2px var(--secondary-color) solid;
+    margin-bottom: 1em;
   }
 
 	aside {
@@ -59,6 +60,11 @@
 		left: 0
   }
 
+  .home {
+    display: flex;
+    justify-content: center;
+  }
+
   .navlink {
     color: var(--primary-color);
     margin: 0.5em;
@@ -68,10 +74,15 @@
     font-family: Oswald,sans-serif;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    transition-duration: 0.2s;
+    transition: all 350ms;
+    text-align: center;
+    padding: 6px;
   }
 
-  .navlink:hover {
-    filter: brightness(0) saturate(100%) invert(81%) sepia(6%) saturate(2751%) hue-rotate(341deg) brightness(88%) contrast(74%);
+  .navlink:hover,
+  .navlink:active {
+    border-top: 2px solid var(--primary-color); 
+    border-bottom: 2px solid var(--primary-color); 
+    color: var(--primary-color-hover);
   }
 </style>

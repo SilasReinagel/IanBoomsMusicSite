@@ -8,14 +8,20 @@
 
 <StandardPageLayout title="About">
   <TwoColumnLayout>
-    <div class='center-vertically' slot='first'>
+    <div class='center-vertically logo-box' slot='first'>
       <img class="logo" src={company.logo} alt="{company.name} Logo"/>
     </div>
     <div slot='second'>
       <h1>{company.name}</h1>
       <p>{company.slogan}</p>
 
-      <SingleColorSocialLinks iconWidth="32px"/>
+      <p>Ian Booms is an music composer, with a special love for Indie Game Developers.</p>
+      <p>On the first Sunday of each month, he hosts the #GameAudio listening party. For more information on the listening party join the Discord</p>
+      <a href="https://t.co/Qc8X0GIe0D?amp=1">#GameAudio Discord</a>
+
+      <div class="margin-top">
+        <SingleColorSocialLinks iconWidth="32px" hideMobile={false}/>
+      </div>
     </div>
   </TwoColumnLayout>
 </StandardPageLayout>
@@ -28,6 +34,10 @@
     margin-bottom: auto;
   }
 
+  .margin-top {
+    margin-top: 3em;
+  }
+
   h1 {
     color: var(--alternate-color);
   }
@@ -38,7 +48,11 @@
     line-height: 1.3em;
   }
 
-  .logo {
+  a {
+    font-size: 1.1em;
+  }
+
+  .logo-box {
     width: 360px;
     max-width: 80vw;
     height: auto;
